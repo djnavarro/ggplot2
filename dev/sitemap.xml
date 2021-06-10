@@ -172,7 +172,7 @@
     <loc>https://ggplot2.tidyverse.org/reference/geom_bar.html</loc>
   </url>
   <url>
-    <loc>https://ggplot2.tidyverse.org/reference/geom_bin2d.html</loc>
+    <loc>https://ggplot2.tidyverse.org/reference/geom_bin_2d.html</loc>
   </url>
   <url>
     <loc>https://ggplot2.tidyverse.org/reference/geom_blank.html</loc>
@@ -197,6 +197,9 @@
   </url>
   <url>
     <loc>https://ggplot2.tidyverse.org/reference/geom_errorbarh.html</loc>
+  </url>
+  <url>
+    <loc>https://ggplot2.tidyverse.org/reference/geom_function.html</loc>
   </url>
   <url>
     <loc>https://ggplot2.tidyverse.org/reference/geom_hex.html</loc>
@@ -448,6 +451,9 @@
     <loc>https://ggplot2.tidyverse.org/reference/scale_colour_continuous.html</loc>
   </url>
   <url>
+    <loc>https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html</loc>
+  </url>
+  <url>
     <loc>https://ggplot2.tidyverse.org/reference/scale_continuous.html</loc>
   </url>
   <url>
@@ -499,6 +505,9 @@
     <loc>https://ggplot2.tidyverse.org/reference/set_last_plot.html</loc>
   </url>
   <url>
+    <loc>https://ggplot2.tidyverse.org/reference/sf_transform_xy.html</loc>
+  </url>
+  <url>
     <loc>https://ggplot2.tidyverse.org/reference/should_stop.html</loc>
   </url>
   <url>
@@ -509,9 +518,6 @@
   </url>
   <url>
     <loc>https://ggplot2.tidyverse.org/reference/stat_ellipse.html</loc>
-  </url>
-  <url>
-    <loc>https://ggplot2.tidyverse.org/reference/stat_function.html</loc>
   </url>
   <url>
     <loc>https://ggplot2.tidyverse.org/reference/stat_identity.html</loc>
@@ -572,6 +578,24 @@
   </url>
   <url>
     <loc>https://ggplot2.tidyverse.org/reference/zeroGrob.html</loc>
+  </url>
+  <url>
+    <loc>https://ggplot2.tidyverse.org/articles/articles/faq-annotation.html</loc>
+  </url>
+  <url>
+    <loc>https://ggplot2.tidyverse.org/articles/articles/faq-axes.html</loc>
+  </url>
+  <url>
+    <loc>https://ggplot2.tidyverse.org/articles/articles/faq-bars.html</loc>
+  </url>
+  <url>
+    <loc>https://ggplot2.tidyverse.org/articles/articles/faq-customising.html</loc>
+  </url>
+  <url>
+    <loc>https://ggplot2.tidyverse.org/articles/articles/faq-faceting.html</loc>
+  </url>
+  <url>
+    <loc>https://ggplot2.tidyverse.org/articles/articles/faq-reordering.html</loc>
   </url>
   <url>
     <loc>https://ggplot2.tidyverse.org/articles/extending-ggplot2.html</loc>
