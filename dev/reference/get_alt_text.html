@@ -6,26 +6,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Roles and responsibilities • ggplot2</title>
+<title>Extract alt text from a plot — get_alt_text • ggplot2</title>
 
 <!-- favicons -->
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png" />
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <!-- Bootstrap -->
-<link href="tidyverse.css" rel="stylesheet">
+<link href="../tidyverse.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
 <!-- bootstrap-toc -->
-<link rel="stylesheet" href="bootstrap-toc.css">
-<script src="bootstrap-toc.js"></script>
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
@@ -39,23 +39,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
-<link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script>
-<link href="tidyverse-2.css" rel="stylesheet">
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script>
+<link href="../tidyverse-2.css" rel="stylesheet">
 
 <!--optional theme-->
-<link href=".css" rel="stylesheet">
+<link href="../.css" rel="stylesheet">
 
 
 
 <!-- docsearch -->
-<script src="docsearch.js"></script>
+<script src="../docsearch.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
-<link href="docsearch.css" rel="stylesheet">
+<link href="../docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="Roles and responsibilities" />
+<meta property="og:title" content="Extract alt text from a plot — get_alt_text" />
+<meta property="og:description" content="This function returns a text that can be used as alt-text in webpages etc.
+Currently it will use the alt label, added with + labs(alt = &amp;lt;...&amp;gt;), or
+a return an empty string, but in the future it might try to generate an alt
+text from the information stored in the plot." />
 <meta property="og:image" content="https://ggplot2.tidyverse.org/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -84,7 +88,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-title-body">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -97,7 +101,7 @@
       </button>
 
       <div class="navbar-brand-container">
-        <a class="navbar-brand" href="index.html">ggplot2</a>
+        <a class="navbar-brand" href="../index.html">ggplot2</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of the <a href="https://tidyverse.org">tidyverse</a></span>
           <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">3.3.5.9000</span>
@@ -108,7 +112,7 @@
       <ul class="nav navbar-nav navbar-right">
         
         <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -144,7 +148,7 @@
     </li>
     <li class="divider"></li>
     <li>
-      <a href="news/index.html">Changelog</a>
+      <a href="../news/index.html">Changelog</a>
     </li>
   </ul>
 </li>
@@ -156,38 +160,38 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="articles/ggplot2-specs.html">Aesthetic specifications</a>
+      <a href="../articles/ggplot2-specs.html">Aesthetic specifications</a>
     </li>
     <li class="divider"></li>
     <li class="dropdown-header">Developer</li>
     <li>
-      <a href="articles/extending-ggplot2.html">Extending ggplot2</a>
+      <a href="../articles/extending-ggplot2.html">Extending ggplot2</a>
     </li>
     <li>
-      <a href="articles/ggplot2-in-packages.html">Using ggplot2 in packages</a>
+      <a href="../articles/ggplot2-in-packages.html">Using ggplot2 in packages</a>
     </li>
     <li>
-      <a href="articles/profiling.html">Profiling Performance</a>
+      <a href="../articles/profiling.html">Profiling Performance</a>
     </li>
     <li class="divider"></li>
     <li class="dropdown-header">FAQ</li>
     <li>
-      <a href="articles/articles/faq-axes.html">FAQ: Axes</a>
+      <a href="../articles/articles/faq-axes.html">FAQ: Axes</a>
     </li>
     <li>
-      <a href="articles/articles/faq-faceting.html">FAQ: Faceting</a>
+      <a href="../articles/articles/faq-faceting.html">FAQ: Faceting</a>
     </li>
     <li>
-      <a href="articles/articles/faq-customising.html">FAQ: Customising</a>
+      <a href="../articles/articles/faq-customising.html">FAQ: Customising</a>
     </li>
     <li>
-      <a href="articles/articles/faq-annotation.html">FAQ: Annotation</a>
+      <a href="../articles/articles/faq-annotation.html">FAQ: Annotation</a>
     </li>
     <li>
-      <a href="articles/articles/faq-reordering.html">FAQ: Reordering</a>
+      <a href="../articles/articles/faq-reordering.html">FAQ: Reordering</a>
     </li>
     <li>
-      <a href="articles/articles/faq-bars.html">FAQ: Barplots</a>
+      <a href="../articles/articles/faq-bars.html">FAQ: Barplots</a>
     </li>
   </ul>
 </li>
@@ -217,81 +221,62 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Roles and responsibilities</h1>
+    <h1>Extract alt text from a plot</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/ggplot2/blob/master/R/labels.r'><code>R/labels.r</code></a></small>
+    <div class="hidden name"><code>get_alt_text.Rd</code></div>
     </div>
 
+    <div class="ref-description">
+    <p>This function returns a text that can be used as alt-text in webpages etc.
+Currently it will use the <code>alt</code> label, added with <code>+ labs(alt = &lt;...&gt;)</code>, or
+a return an empty string, but in the future it might try to generate an alt
+text from the information stored in the plot.</p>
+    </div>
 
-<div id="roles-and-responsibilities" class="section level1">
+    <pre class="usage"><span class='fu'>get_alt_text</span><span class='op'>(</span><span class='va'>p</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
-<p>This project has a large community of <strong>users</strong> and <strong>contributors</strong>, a team of <strong>core developers</strong>, and a <strong>project lead</strong>.</p>
-<div id="users" class="section level2">
-<h2 class="hasAnchor">
-<a href="#users" class="anchor"></a>Users</h2>
-<p>People who create visualizations with ggplot2 are the most important members of the community; without these users, this project would have no purpose.</p>
-<p>Users are encouraged to participate in the life of the project and the community as much as possible. User contributions help ensure that the project is satisfying users’ needs. Common user activities include (but are not limited to):</p>
-<ul>
-<li>evangelising about the project</li>
-<li>asking and answering on community forums</li>
-<li>providing moral support (a ‘thank you’ goes a long way)</li>
-</ul>
-<p>Users who continue to engage with the project and its community will often find themselves becoming more and more involved. Such users may then go on to become contributors, as described above.</p>
-</div>
-<div id="contributors" class="section level2">
-<h2 class="hasAnchor">
-<a href="#contributors" class="anchor"></a>Contributors</h2>
-<p>Contributors interact with the project on GitHub by filing new issues, improving existing issues, or submitting pull requests. Anyone can become a contributor: there is no expectation of commitment to the project, no required set of skills, and no selection process. The only obligation is to follow the <a href="CODE_OF_CONDUCT.html">code of conduct</a>.</p>
-<p>Specific advice for contributing to the project can be found in <a href="https://github.com/tidyverse/ggplot2/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
-</div>
-<div id="core-developers" class="section level2">
-<h2 class="hasAnchor">
-<a href="#core-developers" class="anchor"></a>Core developers</h2>
-<p>Core developers are collectively responsible for day-to-day development of the package, including responding to issues and reviewing pull requests. They are GitHub administrators and <a href="https://github.com/tidyverse/ggplot2/blob/master/DESCRIPTION#L8">package authors</a>, which means that they have the ability to make changes to project code, and receive credit when others cite the package.</p>
-<p>While core developers can modify code directly, this ability is rarely used. Instead, changes are proposed as pull requests, and are only merged after they have been reviewed by at least one other core developer. Changes to the API (especially breaking changes) must also be approved by the project lead.</p>
-<p>Core developers are recruited from contributors. An invitation to join the core team can be extended to anyone who has made a major contribution, either through a small number of large changes, or a consistent pattern of smaller contributions. Any existing core developer can propose a contributor be invited to the core team by emailing the project lead. The project lead will the confirm the invitation with the other core developers.</p>
-<p>The core developers of ggplot2 are:</p>
-<ul>
-<li><a href="https://github.com/wch">Winston Chang</a></li>
-<li><a href="https://github.com/lionel-">Lionel Henry</a></li>
-<li><a href="https://github.com/thomasp85">Thomas Lin Pedersen</a></li>
-<li><a href="https://github.com/kohske">Kohske Takahashi</a></li>
-<li><a href="https://github.com/clauswilke">Claus Wilke</a></li>
-<li><a href="https://github.com/karawoo">Kara Woo</a></li>
-<li><a href="https://github.com/yutannihilation">Hiroaki Yutani</a></li>
-<li><a href="https://github.com/paleolimbot">Dewey Dunnington</a></li>
-</ul>
-<p>All core developers are bound by the <a href="CODE_OF_CONDUCT.html">code of conduct</a>.</p>
-</div>
-<div id="project-lead" class="section level2">
-<h2 class="hasAnchor">
-<a href="#project-lead" class="anchor"></a>Project lead</h2>
-<p>The project lead, <a href="http://github.com/hadley">Hadley Wickham</a>, is responsible for:</p>
-<ul>
-<li>Setting, and clearly communication the strategic objectives of the project.</li>
-<li>Mediating any conflicts amongst the core developers.</li>
-<li>Ensuring that the project survives in the long term.</li>
-</ul>
-<p>The project lead is bound by the <a href="CODE_OF_CONDUCT.html">code of conduct</a>.</p>
-</div>
-</div>
-<div id="decision-making-process" class="section level1">
-<h1 class="hasAnchor">
-<a href="#decision-making-process" class="anchor"></a>Decision-making process</h1>
-<p>This project makes decisions according to a consensus model where suggestions are considered and discussed between the community and core developers, typically in GitHub issues. Where consensus cannot be reached, the project lead’s word is final. If the community questions a decision, the project lead may review it and either uphold or reverse it.</p>
-</div>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>p</th>
+      <td><p>a ggplot object</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Currently ignored</p></td>
+    </tr>
+    </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p>A text string</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='va'>p</span> <span class='op'>&lt;-</span> <span class='fu'><a href='ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>mpg</span>, <span class='fu'><a href='aes.html'>aes</a></span><span class='op'>(</span><span class='va'>displ</span>, <span class='va'>hwy</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='co'># Returns an empty string</span>
+<span class='fu'>get_alt_text</span><span class='op'>(</span><span class='va'>p</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] ""</div><div class='input'>
+<span class='co'># A user provided alt text</span>
+<span class='va'>p</span> <span class='op'>&lt;-</span> <span class='va'>p</span> <span class='op'>+</span> <span class='fu'><a href='labs.html'>labs</a></span><span class='op'>(</span>
+  alt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"A scatterplot showing the negative correlation between engine"</span>,
+              <span class='st'>"displacement as a function of highway miles per gallon"</span><span class='op'>)</span>
+<span class='op'>)</span>
+
+<span class='fu'>get_alt_text</span><span class='op'>(</span><span class='va'>p</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "A scatterplot showing the negative correlation between engine displacement as a function of highway miles per gallon"</div><div class='input'>
+</div></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
-
 
 
       <footer>
